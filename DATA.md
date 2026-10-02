@@ -12,7 +12,7 @@ The original TIFF is available from [Elphel's shared Google Drive file](https://
 
 ## Reconstruction-oriented PNG sequence
 
-`data/images_png_highpass/` contains `image_0000.png` through `image_0388.png`, plus `normalization.json`. The numeric suffix is the zero-based frame index in the source TIFF. Each PNG is a 512 × 640, 8-bit, single-channel image.
+`data/images_png_highpass/` contains `image_0000.png` through `image_0388.png`, plus `normalization.json`. The numeric suffix is the zero-based frame index in the source TIFF. Each PNG is a 512 × 640, 8-bit, single-channel image. This is the preprocessing used for the provided COLMAP baseline; researchers can instead prepare their own images from the original TIFF.
 
 The processing implemented in [`scripts/exifsplitter_highpass.py`](scripts/exifsplitter_highpass.py) is:
 
@@ -34,7 +34,7 @@ XML SHA-256:
 dec3cafef5733fc11e80de25d36375a8fa1e58b18cdb74d5f08b29c025d254c9
 ```
 
-The TIFF, PNG sequence, and XML metadata are provided by [Elphel](https://www.elphel.com/) for public download and modification. Please credit Elphel as the data source; see [ATTRIBUTION.md](ATTRIBUTION.md).
+The TIFF and XML metadata are provided by [Elphel](https://www.elphel.com/); the PNG sequence and baseline point cloud are derived from them. You may download and modify these files. Please credit Elphel as the data source; see [ATTRIBUTION.md](ATTRIBUTION.md).
 
 ## Scope and limitations
 
