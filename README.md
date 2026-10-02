@@ -42,8 +42,8 @@ The provided PNGs are already generated. Their preparation uses a Gaussian blur 
 
 Because this release does not include an independent 3D ground truth, please report the evidence behind any improvement claim: registration coverage, reprojection or consistency measures, views of the resulting point cloud or mesh, rendered-versus-original image comparisons, and failure regions. A lower reprojection error alone does not establish more accurate 3D geometry.
 
-Please use GitHub Discussions for method questions and Issues or pull requests for reproducible results. See [CONTRIBUTING.md](CONTRIBUTING.md) for the information that makes a result comparable.
+Please use GitHub Issues for method questions and Issues or pull requests for reproducible results. See [CONTRIBUTING.md](CONTRIBUTING.md) for the information that makes a result comparable.
 
-## Before public release
+## Release notes
 
 The Google Drive file opens without a Google login. No milestone report PDF is included in this repository.

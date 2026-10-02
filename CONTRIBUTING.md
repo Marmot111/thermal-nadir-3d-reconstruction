@@ -1,6 +1,6 @@
 # Sharing a reconstruction method or result
 
-We welcome questions in GitHub Discussions and reproducible methods through Issues or pull requests. A useful result should include:
+We welcome questions through GitHub Issues and reproducible methods through Issues or pull requests. A useful result should include:
 
 1. The input files and frame range used, including whether you used the raw TIFF, provided PNGs, XML metadata, or other data.
 2. The preprocessing steps and all non-default camera, matching, mapping, or meshing settings.
