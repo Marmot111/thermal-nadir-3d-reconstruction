@@ -6,7 +6,7 @@ Our COLMAP workflow provides a starting point, but its reconstructed geometry do
 
 ## Research question
 
-Starting from the raw thermal TIFF and, optionally, the camera metadata, can you reconstruct a more complete and geometrically consistent 3D scene than the COLMAP baseline provided here? We welcome approaches that use thermal-specific feature extraction, multi-view stereo, pose priors, learned depth, sensor calibration, or other methods. Please state precisely which inputs you use.
+Given the thermal sequence and, optionally, the camera metadata, can you reconstruct a more complete and geometrically consistent 3D scene than the COLMAP baseline provided here? We welcome approaches that use thermal-specific feature extraction, multi-view stereo, pose priors, learned depth, sensor calibration, or other methods. Please state precisely which inputs you use.
 
 ## Data at a glance
 
@@ -19,7 +19,7 @@ Starting from the raw thermal TIFF and, optionally, the camera metadata, can you
 | COLMAP reference workflow | Feature matching, sparse SfM, dense MVS, and point fusion; see [BASELINE.md](BASELINE.md) |
 | Baseline dense point cloud | [baseline/fused.ply](baseline/fused.ply), reconstructed from the example PNG sequence |
 
-I generated the PNG sequence using my own high-pass preprocessing method for the COLMAP baseline. The PNGs are an example, not a required input: please start from the raw TIFF and explore your own preprocessing and reconstruction methods. Use the original floating-point TIFF for quantitative thermal values. Details on frame ordering, units, and metadata appear in [DATA.md](DATA.md).
+I generated the PNG sequence using my own high-pass preprocessing method for the COLMAP baseline. It is an example, not a required input; other approaches may preprocess the original TIFF differently. Use the original floating-point TIFF for quantitative thermal values. Details on frame ordering, units, and metadata appear in [DATA.md](DATA.md).
 
 ## Data and attribution
 
