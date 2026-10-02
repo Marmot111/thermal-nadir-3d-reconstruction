@@ -1,0 +1,17 @@
+{
+  "source_tiff": "1763233716_556705-NADIR-MERGED-RECTILINEAR.tiff",
+  "frame_count": 389,
+  "output_format": "8-bit grayscale PNG",
+  "processing": {
+    "method": "pure high-pass: I - GaussianBlur(I, sigma)",
+    "gaussian_sigma_pixels": 10.0,
+    "blur_border_mode": "reflect",
+    "normalization": "one global symmetric mapping across all frames",
+    "clip_percentile_of_absolute_high_pass": 99.0,
+    "sample_stride": 16,
+    "high_pass_value_at_gray_0": -140.75820922851562,
+    "high_pass_value_at_gray_128": 0.0,
+    "high_pass_value_at_gray_255": 140.75820922851562
+  },
+  "metadata": "No XML or EXIF metadata was read or written."
+}
