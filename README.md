@@ -2,11 +2,11 @@
 
 This repository shares a 389-frame thermal nadir sequence acquired by a UAV carrying an LWIR-16, sixteen-lens camera. We invite reproducible methods that improve reconstruction of the observed water-tower scene, terrain, and vegetation from thermal imagery.
 
-Our current COLMAP reconstruction provides a useful baseline, but its geometry is not yet accurate enough for our downstream research. There is no independently surveyed 3D ground-truth model in this release, so this is an open research problem rather than a ranked benchmark.
+Our documented COLMAP reconstruction provides a baseline workflow, but its geometry is not yet accurate enough for our downstream research. There is no independently surveyed 3D ground-truth model in this release, so this is an open research problem rather than a ranked benchmark.
 
 ## Research question
 
-Given the thermal sequence and, optionally, the camera metadata, can you reconstruct a more complete and geometrically consistent 3D scene than the supplied COLMAP baseline? We welcome approaches that use thermal-specific feature extraction, multi-view stereo, pose priors, learned depth, sensor calibration, or other methods. Please state precisely which inputs you use.
+Given the thermal sequence and, optionally, the camera metadata, can you reconstruct a more complete and geometrically consistent 3D scene than the COLMAP baseline documented here? We welcome approaches that use thermal-specific feature extraction, multi-view stereo, pose priors, learned depth, sensor calibration, or other methods. Please state precisely which inputs you use.
 
 ## Data at a glance
 
@@ -24,7 +24,7 @@ The PNGs are intended for reconstruction. Use the original floating-point TIFF f
 
 The original TIFF, the PNG sequence, and the XML camera metadata are provided by [Elphel](https://www.elphel.com/) and are made publicly available for download with Elphel's permission. Elphel is credited as the data owner. No reuse license, including CC BY 4.0, has been specified for these data; see [DATA_LICENSE.md](DATA_LICENSE.md). Public availability does not by itself grant permission to redistribute or adapt the data.
 
-The preprocessing script is included for reproducibility; no separate reuse license has been specified for the code. The team's milestone report is not included in this release.
+The preprocessing script is included for reproducibility; no separate reuse license has been specified for the code.
 
 ## Get the data
 
@@ -49,7 +49,3 @@ The script uses a Gaussian blur with `sigma=10` pixels and computes the 99th per
 Because this release does not include an independent 3D ground truth, please report the evidence behind any improvement claim: registration coverage, reprojection or consistency measures, views of the resulting point cloud or mesh, rendered-versus-original image comparisons, and failure regions. A lower reprojection error alone does not establish more accurate 3D geometry.
 
 Please use GitHub Issues for method questions and Issues or pull requests for reproducible results. See [CONTRIBUTING.md](CONTRIBUTING.md) for the information that makes a result comparable.
-
-## Release notes
-
-The Google Drive file opens without a Google login. No milestone report PDF is included in this repository.

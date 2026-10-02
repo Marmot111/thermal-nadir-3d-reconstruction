@@ -10,7 +10,7 @@ See [DATA.md](DATA.md) and [`scripts/exifsplitter_highpass.py`](scripts/exifspli
 
 The inspected COLMAP project configuration for this baseline indicates a shared `SIMPLE_RADIAL` camera, SIFT feature extraction, GPU use, and geometric consistency for PatchMatch stereo. The project was run through COLMAP's GUI automatic reconstruction. The XML local-XYZ positions were retained separately for trajectory evaluation and were **not** used as position constraints by the incremental mapper.
 
-The baseline is offered as a reference, not as a verified geometric ground truth. The full COLMAP database, dense stereo workspace, and milestone report are not bundled in this release. If the team chooses to distribute the baseline point cloud and sparse model, they can be attached to a future GitHub Release with exact configuration and version information.
+The baseline is a processing reference, not a verified geometric ground truth. Its reconstruction files are not distributed in this repository.
 
 ## What to report when comparing methods
 
