@@ -8,6 +8,4 @@ We welcome questions through GitHub Issues and reproducible methods through Issu
 4. A downloadable point cloud or mesh, with its coordinate frame and scale convention stated.
 5. Visual comparisons and quantitative measures where available, together with limitations and failure cases.
 
-Please distinguish estimated camera trajectories, image reprojection measures, and actual 3D scene accuracy. We do not yet have independent dense ground truth with which to rank submissions.
-
-Before sharing external datasets or third-party code, make sure their licenses permit redistribution.
+Camera-pose agreement and reprojection error are useful diagnostics, but they do not by themselves measure 3D scene accuracy.

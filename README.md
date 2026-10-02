@@ -1,8 +1,8 @@
 # Thermal Nadir UAV Sequence for 3D Reconstruction
 
-This repository shares a 389-frame thermal nadir sequence acquired by a UAV carrying an LWIR-16, sixteen-lens camera. We invite reproducible methods that improve reconstruction of the observed water-tower scene, terrain, and vegetation from thermal imagery.
+This repository shares a 389-frame thermal nadir sequence acquired by a UAV carrying an LWIR-16, sixteen-lens camera. The images show a water-tower scene, terrain, and vegetation.
 
-Our documented COLMAP reconstruction provides a baseline workflow, but its geometry is not yet accurate enough for our downstream research. There is no independently surveyed 3D ground-truth model in this release, so this is an open research problem rather than a ranked benchmark.
+Our COLMAP workflow provides a starting point, but its reconstructed geometry does not yet meet the needs of our downstream research. We welcome alternative approaches to this reconstruction problem.
 
 ## Research question
 
@@ -16,15 +16,15 @@ Given the thermal sequence and, optionally, the camera metadata, can you reconst
 | Reconstruction-oriented sequence | 389 lossless, 8-bit, single-channel PNG frames in `data/images_png_highpass/` |
 | Camera metadata | Original `data/1763233716_556705-INTERFRAME.corr-xml` file, including local-XYZ scene records |
 | Preprocessing | [`scripts/exifsplitter_highpass.py`](scripts/exifsplitter_highpass.py); frame-wise Gaussian high-pass filtering followed by one sequence-wide symmetric intensity mapping |
-| Existing reconstruction | COLMAP feature matching, sparse SfM, dense MVS, and point fusion; see [BASELINE.md](BASELINE.md) |
+| COLMAP reference workflow | Feature matching, sparse SfM, dense MVS, and point fusion; see [BASELINE.md](BASELINE.md) |
 
 The PNGs are intended for reconstruction. Use the original floating-point TIFF for quantitative thermal values. Details on frame ordering, units, and metadata appear in [DATA.md](DATA.md).
 
-## License and attribution
+## Data and attribution
 
-The original TIFF, the PNG sequence, and the XML camera metadata are provided by [Elphel](https://www.elphel.com/) and are made publicly available for download with Elphel's permission. Elphel is credited as the data owner. No reuse license, including CC BY 4.0, has been specified for these data; see [DATA_LICENSE.md](DATA_LICENSE.md). Public availability does not by itself grant permission to redistribute or adapt the data.
+The original TIFF, the PNG sequence, and the XML camera metadata are provided by [Elphel](https://www.elphel.com/). You may download and modify these files for your work. Please credit Elphel as the data source.
 
-The preprocessing script is included for reproducibility; no separate reuse license has been specified for the code.
+You may also download and modify the preprocessing script to reproduce or adapt the PNG preparation. See [ATTRIBUTION.md](ATTRIBUTION.md) for a summary.
 
 ## Get the data
 
@@ -42,10 +42,10 @@ python scripts/exifsplitter_highpass.py 1763233716_556705-NADIR-MERGED-RECTILINE
 
 The script uses a Gaussian blur with `sigma=10` pixels and computes the 99th percentile of the absolute high-pass residual, sampled across all frames, for one shared mapping. The parameters and transformation are documented in [DATA.md](DATA.md), and the measured mapping is recorded in `data/images_png_highpass/normalization.json`. The original TIFF is not modified.
 
-## Existing baseline and evaluation
+## COLMAP workflow and evaluation
 
 [BASELINE.md](BASELINE.md) records the processing approach and its limitations. The existing COLMAP reconstruction does **not** impose the XML-recorded positions as pose constraints. Contributors are free to use those records, but should describe the coordinate convention and how they associate records with frames.
 
-Because this release does not include an independent 3D ground truth, please report the evidence behind any improvement claim: registration coverage, reprojection or consistency measures, views of the resulting point cloud or mesh, rendered-versus-original image comparisons, and failure regions. A lower reprojection error alone does not establish more accurate 3D geometry.
+Because no independent 3D ground truth is available, please support improvement claims with registration coverage, reprojection or consistency measures, views of the resulting point cloud or mesh, rendered-versus-original image comparisons, and failure regions. A lower reprojection error alone does not establish more accurate 3D geometry.
 
 Please use GitHub Issues for method questions and Issues or pull requests for reproducible results. See [CONTRIBUTING.md](CONTRIBUTING.md) for the information that makes a result comparable.

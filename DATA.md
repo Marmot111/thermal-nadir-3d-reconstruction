@@ -26,7 +26,7 @@ The exact measured amplitude and parameters are in `normalization.json`. PNG bri
 
 `data/1763233716_556705-INTERFRAME.corr-xml` is the original camera metadata file. Its `EYESIS_DCT_AUX.scenes_*` entries contain six numerical values. The first three have been interpreted by the project team as local-XYZ positions in meters, not GPS latitude/longitude. The physical point represented by those positions (camera optical center versus another sensor or platform reference point), the complete orientation convention, and the uncertainty have not yet been verified.
 
-The original image extraction and trajectory comparison workflows associate image index `n` with the `n`th timestamp-sorted `scenes_*` record, excluding other XML entry types. Anyone using these records as pose priors should validate that association and the coordinate convention for their method. PNG preprocessing does not read the XML or embed pose metadata in the PNGs.
+For camera-trajectory comparison, image index `n` is paired with the `n`th timestamp-sorted record whose key has the form `EYESIS_DCT_AUX.scenes_<timestamp>`. The XML also contains `scenes_*_dt` and `scenes_*_d2t` records; these are excluded from the frame-to-position association. There are 389 records of each type. If you use the positions as pose priors, check the frame association and coordinate convention for your method. PNG preprocessing does not read the XML or embed pose metadata in the PNGs.
 
 XML SHA-256:
 
@@ -34,7 +34,7 @@ XML SHA-256:
 dec3cafef5733fc11e80de25d36375a8fa1e58b18cdb74d5f08b29c025d254c9
 ```
 
-The TIFF, PNG sequence, and XML metadata are provided by [Elphel](https://www.elphel.com/) for public download. Their reuse terms have not been specified; see [DATA_LICENSE.md](DATA_LICENSE.md).
+The TIFF, PNG sequence, and XML metadata are provided by [Elphel](https://www.elphel.com/) for public download and modification. Please credit Elphel as the data source; see [ATTRIBUTION.md](ATTRIBUTION.md).
 
 ## Scope and limitations
 

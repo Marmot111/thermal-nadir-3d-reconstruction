@@ -4,14 +4,10 @@ __pycache__/
 venv/
 .idea/
 
-# Large source and reconstruction products are distributed separately, not as Git files.
+# Keep large input data and generated databases out of ordinary Git commits.
 *.tif
 *.tiff
-*.ply
 *.db
-
-# Keep team reports out of this public-data repository.
-*.pdf
 
 # Avoid committing generated COLMAP workspaces.
 gui_reconstruction*/

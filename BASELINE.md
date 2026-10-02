@@ -1,4 +1,4 @@
-# Existing reconstruction baseline
+# COLMAP reference workflow
 
 The current baseline uses the high-pass PNG sequence in COLMAP. It performs feature extraction and image matching, sparse structure-from-motion (SfM), image undistortion, dense multi-view stereo (MVS), and point fusion. A mesh is subsequently produced for visual inspection.
 
@@ -10,10 +10,8 @@ See [DATA.md](DATA.md) and [`scripts/exifsplitter_highpass.py`](scripts/exifspli
 
 The inspected COLMAP project configuration for this baseline indicates a shared `SIMPLE_RADIAL` camera, SIFT feature extraction, GPU use, and geometric consistency for PatchMatch stereo. The project was run through COLMAP's GUI automatic reconstruction. The XML local-XYZ positions were retained separately for trajectory evaluation and were **not** used as position constraints by the incremental mapper.
 
-The baseline is a processing reference, not a verified geometric ground truth. Its reconstruction files are not distributed in this repository.
+The resulting point cloud and mesh are not included in this repository.
 
 ## What to report when comparing methods
 
 Please state the exact input imagery and preprocessing, whether XML positions or other priors were used, your camera model and calibration assumptions, and your software version and parameters. Provide the reconstructed point cloud or mesh and visualizations from comparable viewpoints. Explain how you assessed scene completeness and geometry, especially around the water tower, ground, and vegetation.
-
-The project does not yet provide independent dense 3D ground truth, so no single scalar metric should be described as definitive reconstruction accuracy.
