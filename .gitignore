@@ -1,0 +1,23 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.idea/
+
+# Large source and reconstruction products are distributed separately, not as Git files.
+*.tif
+*.tiff
+*.ply
+*.db
+
+# Keep team reports out of this public-data repository.
+*.pdf
+
+# Avoid committing generated COLMAP workspaces.
+gui_reconstruction*/
+dense/
+sparse/
+
+# Source code is withheld until its publication rights are confirmed.
+scripts/
+requirements.txt
