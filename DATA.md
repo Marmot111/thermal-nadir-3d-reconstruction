@@ -14,7 +14,7 @@ The original TIFF is available from [Elphel's shared Google Drive file](https://
 
 `data/images_png_highpass/` contains `image_0000.png` through `image_0388.png`, plus `normalization.json`. The numeric suffix is the zero-based frame index in the source TIFF. Each PNG is a 512 × 640, 8-bit, single-channel image.
 
-The processing used to generate the PNGs is:
+The processing implemented in [`scripts/exifsplitter_highpass.py`](scripts/exifsplitter_highpass.py) is:
 
 1. For each floating-point frame `I`, compute `H = I - GaussianBlur(I, sigma=10 pixels)`.
 2. Estimate one common amplitude `A` as the 99th percentile of sampled `abs(H)` values across the entire sequence.

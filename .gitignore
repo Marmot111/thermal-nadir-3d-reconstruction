@@ -17,7 +17,3 @@ venv/
 gui_reconstruction*/
 dense/
 sparse/
-
-# Source code is withheld until its publication rights are confirmed.
-scripts/
-requirements.txt

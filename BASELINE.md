@@ -4,7 +4,7 @@ The current baseline uses the high-pass PNG sequence in COLMAP. It performs feat
 
 ## Image preparation
 
-See [DATA.md](DATA.md). The high-pass PNGs are lossless 8-bit grayscale images produced with one shared normalization across all 389 frames. The original thermal TIFF remains available for alternative preprocessing.
+See [DATA.md](DATA.md) and [`scripts/exifsplitter_highpass.py`](scripts/exifsplitter_highpass.py). The high-pass PNGs are lossless 8-bit grayscale images produced with one shared normalization across all 389 frames. The original thermal TIFF remains available for alternative preprocessing.
 
 ## COLMAP setup
 
